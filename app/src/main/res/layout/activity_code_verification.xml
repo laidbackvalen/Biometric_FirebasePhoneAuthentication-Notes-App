@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".authenticaton.Code_Verification_Activity">
+
+    <TextView
+        android:id="@+id/textSkip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text=""
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="#232F34"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/textEnterPhone"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/LottieAdmin"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintBottom_toTopOf="@+id/textEnterPhone"
+        app:layout_constraintEnd_toEndOf="@+id/textEnterPhone"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textEnterPhone"
+        app:layout_constraintTop_toBottomOf="@+id/textSkip"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/loginlottie" />
+
+    <TextView
+        android:id="@+id/textEnterPhone"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="20dp"
+        android:text="OTP Verification"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="#232F34"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/LottieAdmin" />
+
+    <TextView
+        android:id="@+id/text4digitcode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:text="Enter the OTP sent to"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:textColor="#232F34"
+        app:layout_constraintEnd_toStartOf="@id/numberRetrieved"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="@+id/LottieAdmin"
+        app:layout_constraintTop_toBottomOf="@+id/textEnterPhone" />
+
+    <TextView
+        android:id="@+id/numberRetrieved"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:text="7517770046"
+        android:textColor="#232F34"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/text4digitcode"
+        app:layout_constraintEnd_toEndOf="@+id/textEnterPhone"
+        app:layout_constraintStart_toEndOf="@+id/text4digitcode"
+        app:layout_constraintTop_toTopOf="@+id/text4digitcode" />
+
+    <com.chaos.view.PinView
+        android:id="@+id/firstPinView"
+        style="@style/PinWidget.PinView"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:autofillHints="phone"
+        android:cursorVisible="true"
+        android:hint="Hint."
+        android:inputType="phone"
+        android:itemBackground="@color/white"
+        android:padding="5dp"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:cursorColor="#A83737"
+        app:cursorWidth="2dp"
+        app:hideLineWhenFilled="true"
+        app:itemCount="6"
+        app:itemHeight="40dp"
+        app:itemRadius="12dp"
+        app:itemSpacing="10dp"
+        app:itemWidth="40dp"
+        app:layout_constraintEnd_toEndOf="@+id/textEnterPhone"
+        app:layout_constraintStart_toStartOf="@+id/textEnterPhone"
+        app:layout_constraintTop_toBottomOf="@+id/text4digitcode"
+        app:lineColor="#4A6572"
+        app:lineWidth="1dp"
+        app:viewType="rectangle" />
+
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="end"
+        android:text="Didn't recieve OTP?"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:textColor="#344955"
+
+        app:layout_constraintEnd_toStartOf="@+id/textView"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="@+id/text4digitcode"
+        app:layout_constraintTop_toBottomOf="@+id/firstPinView" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:text="RESEND"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:textColor="#C43127"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/textView2"
+        app:layout_constraintEnd_toEndOf="@+id/numberRetrieved"
+        app:layout_constraintStart_toEndOf="@+id/textView2"
+        app:layout_constraintTop_toTopOf="@+id/textView2" />
+
+    <TextView
+        android:id="@+id/resendingCodeTimer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="right"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <Button
+        android:id="@+id/verifyAndContinueButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:backgroundTint="#344955"
+        android:padding="12dp"
+        android:text="VERIFY AND CONTINUE"
+        android:textColor="@color/white"
+        android:textSize="15dp"
+        app:layout_constraintEnd_toEndOf="@+id/firstPinView"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/firstPinView"
+        app:layout_constraintTop_toBottomOf="@+id/firstPinView" />
+</androidx.constraintlayout.widget.ConstraintLayout>

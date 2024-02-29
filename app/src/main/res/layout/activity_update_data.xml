@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".activities.crud.Update_Data_Activity">
+
+    <ImageView
+        android:id="@+id/backImgUpdateData"
+        android:layout_width="60dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:paddingEnd="30dp"
+        android:src="@drawable/backward"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="20dp"
+        android:fontFamily="@font/lato_bold"
+        android:gravity="center"
+        android:text="Update Notes"
+       android:textColor="@color/black"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintBottom_toBottomOf="@+id/backImgUpdateData"
+        app:layout_constraintStart_toEndOf="@+id/backImgUpdateData"
+        app:layout_constraintTop_toTopOf="@+id/backImgUpdateData"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/backImgUpdateData">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                app:boxStrokeColor="#673AB7"
+                app:hintTextColor="#673AB7"
+                android:textColorHint="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/titleTextUpdateData"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/black"
+                    android:hint="Title">
+
+                </com.google.android.material.textfield.TextInputEditText>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                app:boxStrokeColor="#673AB7"
+                app:hintTextColor="#673AB7"
+                android:textColorHint="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textInputLayout">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/descriptiontextUpdateData"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/black"
+                    android:hint="Description">
+
+                </com.google.android.material.textfield.TextInputEditText>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayout3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="10dp"
+                app:boxStrokeColor="#673AB7"
+                app:hintTextColor="#673AB7"
+                android:textColorHint="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textInputLayout2">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/pricetextUpdateData"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/black"
+                    android:hint="Price">
+
+                </com.google.android.material.textfield.TextInputEditText>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayout4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="10dp"
+                app:boxStrokeColor="#673AB7"
+                app:hintTextColor="#673AB7"
+                android:textColorHint="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textInputLayout3">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/quantitytextUpdateData"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/black"
+                    android:hint="Quantity">
+
+                </com.google.android.material.textfield.TextInputEditText>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayout5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:boxStrokeColor="#673AB7"
+                app:hintTextColor="#673AB7"
+                android:textColorHint="@color/black"
+                app:layout_constraintEnd_toEndOf="@+id/textInputLayout4"
+                app:layout_constraintStart_toStartOf="@+id/textInputLayout4"
+                app:layout_constraintTop_toBottomOf="@+id/textInputLayout4">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/moreUpdateData"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/black"
+                    android:hint="More..">
+
+                </com.google.android.material.textfield.TextInputEditText>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/black"
+                android:text="Add Images By Clicking on Image Icons Below \n(Casually wait after selecting the Image, let it render)"
+                app:layout_constraintEnd_toEndOf="@+id/textInputLayout5"
+                app:layout_constraintStart_toStartOf="@+id/textInputLayout5"
+                app:layout_constraintTop_toBottomOf="@+id/textInputLayout5" />
+
+            <ImageView
+                android:id="@+id/imageOneUpdateData"
+                android:layout_width="0dp"
+                android:layout_height="150dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="10dp"
+                android:background="#31000000"
+                android:src="@drawable/baseline_image_24"
+                app:layout_constraintBottom_toTopOf="@+id/addnotesButtonUpdateData"
+                app:layout_constraintEnd_toStartOf="@id/imageTwoUpdateData"
+                app:layout_constraintStart_toStartOf="@+id/textInputLayout5"
+                app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+            <ImageView
+                android:id="@+id/imageTwoUpdateData"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="#31000000"
+                android:layout_marginEnd="5dp"
+                android:src="@drawable/baseline_image_24"
+                app:layout_constraintBottom_toBottomOf="@+id/imageOneUpdateData"
+                app:layout_constraintEnd_toStartOf="@id/imageThreeUpdateData"
+                app:layout_constraintStart_toEndOf="@id/imageOneUpdateData"
+                app:layout_constraintTop_toTopOf="@+id/imageOneUpdateData" />
+
+            <ImageView
+                android:id="@+id/imageThreeUpdateData"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="#31000000"
+                android:layout_marginEnd="5dp"
+                android:src="@drawable/baseline_image_24"
+                app:layout_constraintBottom_toBottomOf="@+id/imageOneUpdateData"
+                app:layout_constraintEnd_toStartOf="@id/imageFourUpdateData"
+                app:layout_constraintStart_toEndOf="@id/imageTwoUpdateData"
+                app:layout_constraintTop_toTopOf="@+id/imageOneUpdateData" />
+
+            <ImageView
+                android:id="@+id/imageFourUpdateData"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="#31000000"
+                android:src="@drawable/baseline_image_24"
+                app:layout_constraintBottom_toBottomOf="@+id/imageThreeUpdateData"
+                app:layout_constraintEnd_toEndOf="@+id/textInputLayout5"
+                app:layout_constraintStart_toEndOf="@id/imageThreeUpdateData"
+                app:layout_constraintTop_toTopOf="@+id/imageThreeUpdateData" />
+
+            <Button
+                android:id="@+id/addnotesButtonUpdateData"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="88dp"
+                android:text="Add Notes"
+                android:textColor="@color/white"
+                android:backgroundTint="#673AB7"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/textInputLayout2"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/textInputLayout2" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

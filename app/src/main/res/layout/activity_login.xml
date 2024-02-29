@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".authenticaton.Login_Activity">
+
+<!--    <TextView-->
+<!--        android:id="@+id/textSkip"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="20dp"-->
+<!--        android:text="SKIP"-->
+<!--        android:textAlignment="center"-->
+<!--        android:textAppearance="@style/TextAppearance.AppCompat.Medium"-->
+<!--        android:textColor="#232F34"-->
+<!--        android:textStyle="bold"-->
+<!--        app:layout_constraintEnd_toEndOf="@+id/editTextPhoneNumber"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+    <TextView
+        android:id="@+id/textEnterPhone"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="Enter Your Phone Number"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="#232F34"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/loginButton"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/loginButton"
+        app:layout_constraintTop_toBottomOf="@+id/LottieAdmin" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/LottieAdmin"
+        android:layout_width="0dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="52dp"
+        app:layout_constraintEnd_toEndOf="@+id/textEnterPhone"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/textEnterPhone"
+        app:layout_constraintTop_toTopOf="parent"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/adminlottie" />
+
+    <TextView
+        android:id="@+id/text4digitcode"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="We will send you 4 digit Verification code"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:textColor="#232F34"
+        app:layout_constraintEnd_toEndOf="@+id/textEnterPhone"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textEnterPhone"
+        app:layout_constraintTop_toBottomOf="@+id/textEnterPhone" />
+
+    <com.hbb20.CountryCodePicker
+        android:id="@+id/countryCodePicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:background="@drawable/edittext_border"
+        app:ccpDialog_textColor="#03A9F4"
+        app:ccp_showFlag="false"
+        app:ccp_showNameCode="false"
+        app:ccp_showPhoneCode="false"
+        app:layout_constraintBottom_toBottomOf="@+id/editTextPhoneNumber"
+        app:layout_constraintEnd_toStartOf="@id/editTextPhoneNumber"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/editTextPhoneNumber"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/countryCodeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingStart="5dp"
+        android:paddingEnd="5dp"
+        android:text="Code"
+        android:textAlignment="center"
+        android:textColor="#4A6572"
+        android:textSize="12dp"
+        app:layout_constraintHorizontal_bias="0.20"
+        app:layout_constraintBottom_toBottomOf="@+id/emai"
+        app:layout_constraintEnd_toEndOf="@+id/countryCodePicker"
+        app:layout_constraintStart_toStartOf="@+id/countryCodePicker"
+        app:layout_constraintTop_toTopOf="@+id/emai" />
+
+    <EditText
+        android:id="@+id/editTextPhoneNumber"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="5dp"
+        android:background="@drawable/edittext_border"
+        android:textColor="#232F34"
+        android:maxLength="12"
+        android:inputType="phone"
+        android:paddingStart="12dp"
+        android:paddingTop="10dp"
+        android:paddingEnd="12dp"
+        android:paddingBottom="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_weight="3.9"
+        app:layout_constraintStart_toEndOf="@+id/countryCodePicker"
+        app:layout_constraintTop_toBottomOf="@+id/text4digitcode"
+        tools:ignore="TextFields" />
+
+    <TextView
+        android:id="@+id/emai"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:background="@color/white"
+        android:paddingStart="5dp"
+        android:paddingEnd="5dp"
+        android:text="Phone Number"
+        android:textAlignment="center"
+        android:textColor="#4A6572"
+        android:textSize="12dp"
+        app:layout_constraintBottom_toBottomOf="@+id/editTextPhoneNumber"
+        app:layout_constraintEnd_toEndOf="@+id/editTextPhoneNumber"
+        app:layout_constraintHorizontal_bias="0.028"
+        app:layout_constraintStart_toStartOf="@+id/editTextPhoneNumber" />
+
+    <ProgressBar
+        android:id="@+id/progressBarLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/loginButton"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="@+id/loginButton"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.631" />
+
+    <Button
+        android:id="@+id/loginButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="20dp"
+        android:backgroundTint="#344955"
+        android:padding="12dp"
+        android:text="GENERATE OTP"
+        android:textColor="@color/white"
+        android:textSize="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextPhoneNumber" />
+</androidx.constraintlayout.widget.ConstraintLayout>

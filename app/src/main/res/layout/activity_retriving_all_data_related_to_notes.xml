@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".activities.crud.Retriving_All_Data_Related_To_Notes_Activity">
+
+    <ImageView
+        android:id="@+id/imageViewRetrieveAll"
+        android:layout_width="60dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:paddingEnd="30dp"
+        android:src="@drawable/backward"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewEditRetrieve"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginEnd="15dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/lato_bold"
+        android:gravity="center"
+        android:text="Edit"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewRetrieveAll"
+        app:layout_constraintEnd_toStartOf="@+id/shareImageRetrieveAll"
+        app:layout_constraintTop_toTopOf="@+id/imageViewRetrieveAll" />
+
+    <ImageView
+        android:id="@+id/shareImageRetrieveAll"
+        android:layout_width="30dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="15dp"
+        android:src="@drawable/share"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewEditRetrieve"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textViewEditRetrieve" />
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:background="#B7B3C2C8"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewRetrieveAll">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/titleRA"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="24dp"
+                android:elevation="10dp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/lato_bold"
+                android:text="Title : "
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@id/titleRetrieveAll"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/titleRetrieveAll"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/image_background_radius"
+                android:fontFamily="@font/lato"
+                android:paddingStart="10dp"
+                android:paddingTop="20dp"
+                android:paddingEnd="10dp"
+                android:textColor="@color/black"
+                android:paddingBottom="10dp"
+                android:text="Title"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                app:layout_constraintEnd_toEndOf="@+id/descriptionRetrieveAll"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/titleRA" />
+
+            <TextView
+                android:id="@+id/descRA"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:elevation="10dp"
+                android:fontFamily="@font/lato_bold"
+                android:text="Description :"
+                android:textColor="@color/black"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/descriptionRetrieveAll"
+                app:layout_constraintStart_toStartOf="@+id/descriptionRetrieveAll"
+                app:layout_constraintTop_toTopOf="@+id/descriptionRetrieveAll" />
+
+            <TextView
+                android:id="@+id/descriptionRetrieveAll"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="60dp"
+                android:background="@drawable/image_background_radius"
+                android:fontFamily="@font/lato"
+                android:paddingStart="10dp"
+                android:paddingTop="50dp"
+                android:paddingEnd="10dp"
+                android:textColor="@color/black"
+                android:paddingBottom="10dp"
+                android:text="description"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                app:layout_constraintEnd_toEndOf="@+id/priceRetrieveAll"
+                app:layout_constraintStart_toStartOf="@id/titleRetrieveAll"
+                app:layout_constraintTop_toBottomOf="@+id/titleRetrieveAll" />
+
+            <TextView
+                android:id="@+id/priceRA"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:text="Price : "
+                android:textColor="@color/black"
+                android:fontFamily="@font/lato_bold"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/priceRetrieveAll"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/priceRetrieveAll" />
+
+            <TextView
+                android:id="@+id/priceRetrieveAll"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="15dp"
+                android:text=""
+                android:textColor="@color/black"
+                android:fontFamily="@font/lato"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@+id/priceRA"
+                app:layout_constraintTop_toBottomOf="@+id/descriptionRetrieveAll" />
+
+            <TextView
+                android:id="@+id/qtyRA"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:text="Quantity : "
+                android:textColor="@color/black"
+                android:fontFamily="@font/lato_bold"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                app:layout_constraintBottom_toBottomOf="@id/quantityRetrieveAll"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/quantityRetrieveAll" />
+
+            <TextView
+                android:id="@+id/quantityRetrieveAll"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="15dp"
+                android:text=""
+                android:textColor="@color/black"
+                android:fontFamily="@font/lato"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/qtyRA"
+                app:layout_constraintTop_toBottomOf="@+id/priceRetrieveAll" />
+
+            <TextView
+                android:id="@+id/moreRA"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:text="More : "
+                android:textColor="@color/black"
+                android:fontFamily="@font/lato_bold"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                app:layout_constraintBottom_toBottomOf="@id/moreRetrieveAll"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/moreRetrieveAll" />
+
+            <TextView
+                android:id="@+id/moreRetrieveAll"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="15dp"
+                android:fontFamily="@font/lato"
+                android:text=""
+                android:textColor="@color/black"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/moreRA"
+                app:layout_constraintTop_toBottomOf="@+id/quantityRetrieveAll" />
+
+            <ImageView
+                android:id="@+id/imageRetrieveAll"
+                android:layout_width="0dp"
+                android:layout_height="300dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="15dp"
+                android:padding="10dp"
+                android:background="@drawable/image_background_radius"
+                android:src="@drawable/baseline_image_24_black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/descriptionRetrieveAll"
+                app:layout_constraintTop_toBottomOf="@+id/moreRetrieveAll" />
+
+            <ImageView
+                android:id="@+id/image2RetrieveAll"
+                android:layout_width="0dp"
+                android:layout_height="300dp"
+                android:layout_marginTop="15dp"
+                android:padding="10dp"
+                android:background="@drawable/image_background_radius"
+                android:src="@drawable/baseline_image_24_black"
+                app:layout_constraintEnd_toEndOf="@+id/imageRetrieveAll"
+                app:layout_constraintStart_toStartOf="@+id/descriptionRetrieveAll"
+                app:layout_constraintTop_toBottomOf="@+id/imageRetrieveAll" />
+
+            <ImageView
+                android:id="@+id/image3RetrieveAll"
+                android:layout_width="0dp"
+                android:layout_height="300dp"
+                android:layout_marginTop="15dp"
+                android:padding="10dp"
+                android:background="@drawable/image_background_radius"
+                android:src="@drawable/baseline_image_24_black"
+                app:layout_constraintEnd_toEndOf="@+id/imageRetrieveAll"
+                app:layout_constraintStart_toStartOf="@+id/descriptionRetrieveAll"
+                app:layout_constraintTop_toBottomOf="@+id/image2RetrieveAll" />
+
+            <ImageView
+                android:id="@+id/image4RetrieveAll"
+                android:layout_width="0dp"
+                android:layout_height="300dp"
+                android:layout_marginTop="12dp"
+                android:padding="10dp"
+                android:background="@drawable/image_background_radius"
+                android:src="@drawable/baseline_image_24_black"
+                app:layout_constraintEnd_toEndOf="@+id/imageRetrieveAll"
+                app:layout_constraintStart_toStartOf="@+id/descriptionRetrieveAll"
+                app:layout_constraintTop_toBottomOf="@+id/image3RetrieveAll" />
+
+            <TextView
+                android:id="@+id/DateRA"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:text="Date - "
+                android:textColor="@color/black"
+                android:fontFamily="@font/lato_bold"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                app:layout_constraintBottom_toBottomOf="@id/dateRetrieveAll"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/dateRetrieveAll"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="15dp"
+                android:text="Date"
+                android:textColor="@color/black"
+                android:fontFamily="@font/lato"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/DateRA"
+                app:layout_constraintTop_toBottomOf="@+id/image4RetrieveAll" />
+
+            <TextView
+                android:id="@+id/timeRA"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:text="Time - "
+                android:textColor="@color/black"
+                android:fontFamily="@font/lato_bold"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                app:layout_constraintBottom_toBottomOf="@id/timeRetrieveAll"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/timeRetrieveAll"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="20dp"
+                android:text="Time"
+                android:textColor="@color/black"
+                android:fontFamily="@font/lato"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/timeRA"
+                app:layout_constraintTop_toBottomOf="@id/dateRetrieveAll" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
