@@ -40,9 +40,7 @@ class MyRecyclerAdapter(private val context: Context, private val dataClassList:
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        return ViewHolder(
-            LayoutInflater.from(context).inflate(R.layout.note_content_recycler, parent, false)
-        )
+        return ViewHolder(LayoutInflater.from(context).inflate(R.layout.note_content_recycler, parent, false))
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {

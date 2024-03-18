@@ -3,6 +3,7 @@ package com.example.notes.activities.crud
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.CalendarView
 import android.widget.ImageView
@@ -18,11 +19,13 @@ import com.example.notes.authenticaton.Login_Activity
 import com.example.notes.adapter.MyRecyclerAdapter
 import com.example.notes.activities.Notifications_Activity
 import com.example.notes.R
+import com.example.notes.fcm.MyFirebaseMessagingService
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
+import com.google.firebase.messaging.FirebaseMessaging
 import java.text.SimpleDateFormat
 
 class All_Notes_Activity : AppCompatActivity() {
@@ -35,6 +38,14 @@ class All_Notes_Activity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main2)
+
+        FirebaseMessaging.getInstance().token.addOnCompleteListener {  //this one is generating token
+            if(!it.isSuccessful){
+                Log.e("TokenDetails", "Toke didn't recieve!")
+            }
+            val token = it.result
+            Log.e("TOKEN", token)
+        }
 
         drawer = findViewById<DrawerLayout>(R.id.drawerLayout) as DrawerLayout //DRAWERLAYOUT
 

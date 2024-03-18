@@ -10,6 +10,7 @@ import android.widget.TextView
 import androidx.annotation.RequiresApi
 import com.example.notes.activities.crud.Create_Data_Activity
 import com.example.notes.R
+import com.example.notes.fcm.MyFirebaseMessagingService
 import com.google.android.material.textfield.TextInputEditText
 import java.text.DateFormat
 import java.util.Calendar
@@ -20,6 +21,7 @@ class Add_Notes_Activity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
 
         var titleTXT = findViewById<TextInputEditText>(R.id.titleText)
         var descriptionTXT = findViewById<TextInputEditText>(R.id.descriptiontext)
