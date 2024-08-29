@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/black"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/view_bg"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/t"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/lato_bold"
+            android:text=""
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:fontFamily="@font/lato_bold"
+            android:text="Step 1: Enter Phone Number"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="@color/white"
+            android:gravity="center"
+            app:layout_constraintEnd_toEndOf="@+id/textInputLayoutNumber"
+            app:layout_constraintStart_toStartOf="@+id/t"
+            app:layout_constraintTop_toBottomOf="@+id/t" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayoutNumber"
+            style="@style/CustomTextInputLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:textColorHint="@color/theme"
+            app:boxStrokeColor="@color/theme"
+            app:layout_constraintEnd_toEndOf="@+id/t"
+            app:layout_constraintStart_toStartOf="@+id/t"
+            app:layout_constraintTop_toBottomOf="@+id/textView10"
+            app:passwordToggleTint="@color/theme"
+            app:startIconDrawable="@drawable/baseline_phone_android_24"
+            app:startIconTint="@color/theme">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/userNumber"
+                style="@style/CustomTextInputEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/lato"
+                android:hint="+Countrycode Phonenumber"
+                android:inputType="phone"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColorHint="@color/theme" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/addNumberButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="#F3C94E"
+            android:fontFamily="@font/lato_bold"
+            android:text="Send Code"
+            android:textColor="@color/white"
+            app:cornerRadius="50dp"
+            app:layout_constraintEnd_toEndOf="@+id/textInputLayoutNumber"
+            app:layout_constraintStart_toStartOf="@+id/textInputLayoutNumber"
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayoutNumber" />
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="50dp"
+            android:layout_marginTop="40dp"
+            android:fontFamily="@font/lato"
+            android:text="Note : While writing your Phone number,  make sure to add your country code followed by a + icon. \nNo spaces are allowed,\nFor Example : +917123456789"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/textInputLayoutNumber"
+            app:layout_constraintStart_toStartOf="@+id/addNumberButton"
+            app:layout_constraintTop_toBottomOf="@+id/addNumberButton" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

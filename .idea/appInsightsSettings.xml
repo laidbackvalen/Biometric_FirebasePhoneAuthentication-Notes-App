@@ -3,13 +3,27 @@
   <component name="AppInsightsSettings">
     <option name="tabSettings">
       <map>
+        <entry key="Android Vitals">
+          <value>
+            <InsightsFilterSettings>
+              <option name="connection">
+                <ConnectionSetting>
+                  <option name="appId" value="com.valenpatel.bmicalculator" />
+                </ConnectionSetting>
+              </option>
+              <option name="signal" value="SIGNAL_UNSPECIFIED" />
+              <option name="timeIntervalDays" value="SEVEN_DAYS" />
+              <option name="visibilityType" value="ALL" />
+            </InsightsFilterSettings>
+          </value>
+        </entry>
         <entry key="Firebase Crashlytics">
           <value>
             <InsightsFilterSettings>
               <option name="connection">
                 <ConnectionSetting>
-                  <option name="appId" value="com.example.notes" />
-                  <option name="mobileSdkAppId" value="1:438399053876:android:c8146240d4135f9c81da61" />
+                  <option name="appId" value="com.valenpatel.notes" />
+                  <option name="mobileSdkAppId" value="1:438399053876:android:0d496afa6ed0501a81da61" />
                   <option name="projectId" value="notes-22392" />
                   <option name="projectNumber" value="438399053876" />
                 </ConnectionSetting>

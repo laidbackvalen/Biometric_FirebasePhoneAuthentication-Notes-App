@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">Notes</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="made_with_love">MADE WITH ♥ BY\nVALEN PATEL</string>
 </resources>

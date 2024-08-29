@@ -2,4 +2,21 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="theme">#F3C94E</color>
+    <color name="themeColor">@color/white</color>
+    <color name="themeDark">#1C1C1C</color>
+    <color name="dark_Red">#8B0000</color>
+    <color name="dark_Green">#346834</color>
+    <color name="dark_Blue">#00008B</color>
+    <color name="dark_Purple">#4B0082</color>
+    <color name="dark_Cyan">#008B8B</color>
+    <color name="dark_Orange">#CE7A13</color>
+    <color name="dark_Brown">#654321</color>
+    <color name="dark_Gray">#2F4F4F</color>
+
+    <color name="hintColor">#F3C94E</color>
+    <color name="textColorHint">@color/white</color>
+    <color name="selected">#6DFFFFFF</color>
+
+
 </resources>

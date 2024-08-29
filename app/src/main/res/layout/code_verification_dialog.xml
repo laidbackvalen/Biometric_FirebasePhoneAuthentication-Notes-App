@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/black"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/view_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/t"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/lato_bold"
+            android:text=""
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lato_bold"
+            android:gravity="center"
+            android:text="Step 2 : Enter Verification Code"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="@+id/t"
+            app:layout_constraintStart_toStartOf="@+id/t"
+            app:layout_constraintTop_toBottomOf="@+id/t" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayoutCodeVerification"
+            style="@style/CustomTextInputLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:textColorHint="@color/theme"
+            app:boxStrokeColor="@color/theme"
+            app:layout_constraintEnd_toEndOf="@+id/t"
+            app:layout_constraintStart_toStartOf="@+id/t"
+            app:layout_constraintTop_toBottomOf="@+id/textView11"
+            app:passwordToggleTint="@color/theme"
+            app:startIconDrawable="@drawable/baseline_password_24"
+            app:startIconTint="@color/theme">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/verificationCode"
+                style="@style/CustomTextInputEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/lato"
+                android:hint="Enter 6 digit Code"
+                android:inputType="number"
+                android:maxLength="6"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColorHint="@color/theme" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/verifyCodeButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="50dp"
+            android:backgroundTint="#F3C94E"
+            android:fontFamily="@font/lato_bold"
+            android:text="Verify Code"
+            android:textColor="@color/white"
+            app:cornerRadius="50dp"
+            app:layout_constraintEnd_toEndOf="@+id/textInputLayoutCodeVerification"
+            app:layout_constraintStart_toStartOf="@+id/textInputLayoutCodeVerification"
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayoutCodeVerification" />
+
+        <TextView
+            android:id="@+id/textView1111"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="50dp"
+            android:fontFamily="@font/lato"
+            android:text="Note : Enter the verification code sent to your phone number"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/textInputLayoutCodeVerification"
+            app:layout_constraintStart_toStartOf="@+id/verifyCodeButton"
+            app:layout_constraintTop_toBottomOf="@+id/verifyCodeButton" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

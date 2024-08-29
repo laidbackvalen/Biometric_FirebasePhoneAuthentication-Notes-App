@@ -1,56 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-   xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#0B0B0B">
 
     <View
         android:id="@+id/topView"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:background="#B3C2C8"
         app:layout_constraintBottom_toTopOf="@id/bottomView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_weight="0.8" />
+        app:layout_constraintVertical_weight="0.3" />
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardView"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="52dp"
-        android:backgroundTint="#9CFFFFFF"
-        app:cardCornerRadius="200dp"
-        app:layout_constraintEnd_toEndOf="@id/topView"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="@id/topView"
-        app:layout_constraintTop_toTopOf="@id/topView" />
+    <!--    <androidx.cardview.widget.CardView-->
+    <!--        android:id="@+id/cardView"-->
+    <!--        android:layout_width="60dp"-->
+    <!--        android:layout_height="60dp"-->
+    <!--        android:layout_marginTop="52dp"-->
+    <!--        android:backgroundTint="#9CFFFFFF"-->
+    <!--        app:cardCornerRadius="200dp"-->
+    <!--        app:layout_constraintEnd_toEndOf="@id/topView"-->
+    <!--        app:layout_constraintHorizontal_bias="0.498"-->
+    <!--        app:layout_constraintStart_toStartOf="@id/topView"-->
+    <!--        app:layout_constraintTop_toTopOf="@id/topView" />-->
 
-    <TextView
-        android:layout_width="0dp"
+    <!--    <TextView-->
+    <!--        android:layout_width="0dp"-->
+    <!--        android:layout_height="0dp"-->
+    <!--        android:gravity="center"-->
+    <!--        android:text="N"-->
+    <!--        android:textAppearance="@style/TextAppearance.AppCompat.Display2"-->
+    <!--        android:textColor="@color/white"-->
+    <!--        app:layout_constraintBottom_toBottomOf="@+id/cardView"-->
+    <!--        app:layout_constraintEnd_toEndOf="@+id/cardView"-->
+    <!--        app:layout_constraintStart_toStartOf="@+id/cardView"-->
+    <!--        app:layout_constraintTop_toTopOf="@+id/cardView" />-->
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_width="40dp"
         android:layout_height="0dp"
-        android:gravity="center"
-        android:text="N"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
-        android:textColor="@color/white"
-        app:layout_constraintBottom_toBottomOf="@+id/cardView"
-        app:layout_constraintEnd_toEndOf="@+id/cardView"
-        app:layout_constraintStart_toStartOf="@+id/cardView"
-        app:layout_constraintTop_toTopOf="@+id/cardView" />
+        android:layout_marginEnd="15dp"
+        app:layout_constraintBottom_toBottomOf="@+id/topView"
+        app:layout_constraintEnd_toEndOf="@+id/topView"
+        app:layout_constraintTop_toTopOf="@+id/topView"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/fire" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="5dp"
-        android:text="Notes!"
+        android:layout_marginStart="20dp"
         android:fontFamily="@font/lato_bold"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        android:textColor="@color/white"
-        app:layout_constraintBottom_toTopOf="@id/emailDrawerNavLayout"
-        app:layout_constraintEnd_toEndOf="@+id/cardView"
-        app:layout_constraintStart_toStartOf="@+id/cardView" />
+        android:text="Keep Notes!"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="@color/theme"
+        app:layout_constraintBottom_toBottomOf="@+id/topView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/emailDrawerNavLayout"
@@ -58,149 +69,327 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:layout_marginBottom="30dp"
-        android:text=""
         android:fontFamily="@font/lato"
+        android:text=""
         android:textAppearance="@style/TextAppearance.AppCompat.Small"
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="@+id/topView"
         app:layout_constraintEnd_toEndOf="@+id/textView"
         app:layout_constraintHorizontal_bias="0.493"
-        app:layout_constraintStart_toStartOf="@+id/textView"
-        />
+        app:layout_constraintStart_toStartOf="@+id/textView" />
 
     <View
         android:id="@+id/bottomView"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:background="#F3C94E"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/view5"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/topView"
         app:layout_constraintVertical_weight="2" />
 
-    <TextView
-        android:id="@+id/createNoteTextview"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:padding="10dp"
-        android:text="Create Note"
-        android:fontFamily="@font/lato"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        android:textColor="@color/white"
-        app:layout_constraintEnd_toStartOf="@id/cartImageHomeTopBar"
-        app:layout_constraintStart_toStartOf="@id/bottomView"
-        app:layout_constraintTop_toTopOf="@+id/bottomView" />
-
-    <ImageView
-        android:id="@+id/cartImageHomeTopBar"
-        android:layout_width="wrap_content"
+    <ScrollView
+        android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:contentDescription="TODO"
-        android:padding="5dp"
-        android:src="@drawable/edit"
-        app:layout_constraintBottom_toBottomOf="@+id/createNoteTextview"
-        app:layout_constraintEnd_toEndOf="@+id/bottomView"
-        app:layout_constraintTop_toTopOf="@+id/createNoteTextview" />
+        android:fillViewport="true"
+        android:fitsSystemWindows="true"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toBottomOf="@+id/bottomView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topView">
 
-    <TextView
-        android:id="@+id/notificationTextView"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/lato"
-        android:padding="10dp"
-        android:text="Notification"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        android:textColor="@color/white"
-        app:layout_constraintEnd_toStartOf="@+id/notifyImage"
-        app:layout_constraintStart_toStartOf="@id/bottomView"
-        app:layout_constraintTop_toBottomOf="@+id/createNoteTextview" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-    <ImageView
-        android:id="@+id/notifyImage"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:padding="5dp"
-        android:src="@drawable/baseline_notifications_24"
-        app:layout_constraintBottom_toBottomOf="@+id/notificationTextView"
-        app:layout_constraintEnd_toEndOf="@+id/cartImageHomeTopBar"
-        app:layout_constraintTop_toTopOf="@id/notificationTextView" />
+            <View
+                android:id="@+id/view"
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/view_bg"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/eventReminderTextView"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/lato"
-        android:padding="10dp"
-        android:text="Create Event"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        android:textColor="@color/white"
-        app:layout_constraintEnd_toStartOf="@id/eventReminderImageHomeTopBar"
-        app:layout_constraintStart_toStartOf="@id/bottomView"
-        app:layout_constraintTop_toBottomOf="@+id/notificationTextView" />
+            <TextView
+                android:id="@+id/allNoteTextview"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:fontFamily="@font/lato_bold"
+                android:gravity="center|start"
+                android:padding="10dp"
+                android:text="All Notes"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/cartImageHomeTopBar"
+                app:layout_constraintTop_toTopOf="@+id/view" />
 
-    <ImageView
-        android:id="@+id/eventReminderImageHomeTopBar"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:padding="5dp"
-        android:src="@drawable/baseline_calendar_month_24"
-        app:layout_constraintBottom_toBottomOf="@+id/eventReminderTextView"
-        app:layout_constraintEnd_toEndOf="@+id/notifyImage"
-        app:layout_constraintTop_toTopOf="@id/eventReminderTextView" />
+            <ImageView
+                android:id="@+id/allImageHomeTopBar"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginStart="10dp"
+                android:contentDescription="TODO"
+                android:gravity="center"
+                android:padding="5dp"
+                android:src="@drawable/baseline_all_inbox_24"
+                app:layout_constraintBottom_toTopOf="@+id/cartImageHomeTopBar"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/allNoteTextview" />
 
-    <TextView
-        android:id="@+id/contactUsTextView"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/lato"
-        android:padding="10dp"
-        android:text="Contact Us"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        android:textColor="@color/white"
-        app:layout_constraintEnd_toEndOf="@+id/createNoteTextview"
-        app:layout_constraintStart_toStartOf="@id/bottomView"
-        app:layout_constraintTop_toBottomOf="@+id/eventReminderTextView" />
+            <TextView
+                android:id="@+id/createNoteTextview"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:fontFamily="@font/lato_bold"
+                android:gravity="center|start"
+                android:padding="10dp"
+                android:text="Create Note"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/cartImageHomeTopBar"
+                app:layout_constraintTop_toBottomOf="@+id/view" />
 
-    <ImageView
-        android:id="@+id/contactUsImageView"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-       android:src="@drawable/baseline_call_24"
-        android:padding="5dp"
-        app:layout_constraintBottom_toBottomOf="@+id/contactUsTextView"
-        app:layout_constraintEnd_toEndOf="@+id/cartImageHomeTopBar"
-        app:layout_constraintStart_toEndOf="@+id/contactUsTextView"
-        app:layout_constraintTop_toTopOf="@id/contactUsTextView" />
+            <ImageView
+                android:id="@+id/cartImageHomeTopBar"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginStart="10dp"
+                android:contentDescription="TODO"
+                android:gravity="center"
+                android:padding="5dp"
+                android:src="@drawable/baseline_mode_edit_outline_24"
+                app:layout_constraintBottom_toBottomOf="@+id/createNoteTextview"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/createNoteTextview" />
 
-    <TextView
-        android:id="@+id/logoutTextView"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/lato"
-        android:padding="10dp"
-        android:text="Logout"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        android:textColor="@color/white"
-        app:layout_constraintEnd_toEndOf="@+id/createNoteTextview"
-        app:layout_constraintStart_toStartOf="@id/bottomView"
-        app:layout_constraintTop_toBottomOf="@+id/contactUsTextView" />
+            <TextView
+                android:id="@+id/notificationTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/lato_bold"
+                android:gravity="center|start"
+                android:padding="10dp"
+                android:text="Notification"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/createNoteTextview"
+                app:layout_constraintTop_toBottomOf="@+id/createNoteTextview" />
 
-    <ImageView
-        android:id="@+id/logImageHomeTopBar"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-       android:src="@drawable/baseline_power_settings_new_24"
-        android:padding="5dp"
-        app:layout_constraintBottom_toBottomOf="@+id/logoutTextView"
-        app:layout_constraintEnd_toEndOf="@+id/cartImageHomeTopBar"
-        app:layout_constraintStart_toEndOf="@+id/logoutTextView"
-        app:layout_constraintTop_toTopOf="@id/logoutTextView" />
+            <ImageView
+                android:id="@+id/notifyImage"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:gravity="center"
+                android:padding="5dp"
+                android:src="@drawable/baseline_notifications_24"
+                app:layout_constraintBottom_toBottomOf="@+id/notificationTextView"
+                app:layout_constraintEnd_toEndOf="@+id/cartImageHomeTopBar"
+                app:layout_constraintTop_toTopOf="@id/notificationTextView" />
+
+            <!--    <TextView-->
+            <!--        android:id="@+id/textView6"-->
+            <!--        android:layout_width="wrap_content"-->
+            <!--        android:layout_height="wrap_content"-->
+            <!--        android:text="   android:layout_marginStart=&quot;15dp&quot;" />-->
+
+            <TextView
+                android:id="@+id/eventReminderTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/lato_bold"
+                android:gravity="center|start"
+                android:padding="10dp"
+                android:text="Create Event"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="@+id/notificationTextView"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@+id/createNoteTextview"
+                app:layout_constraintTop_toBottomOf="@+id/notificationTextView" />
+
+            <ImageView
+                android:id="@+id/eventReminderImageHomeTopBar"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:gravity="center"
+                android:padding="5dp"
+                android:src="@drawable/baseline_calendar_month_24"
+                app:layout_constraintBottom_toBottomOf="@+id/eventReminderTextView"
+                app:layout_constraintEnd_toEndOf="@+id/notifyImage"
+                app:layout_constraintTop_toTopOf="@id/eventReminderTextView" />
+
+
+            <TextView
+                android:id="@+id/helpandSupportTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/lato_bold"
+                android:gravity="center|start"
+                android:padding="10dp"
+                android:text="Help and Support"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="@+id/notificationTextView"
+                app:layout_constraintStart_toStartOf="@+id/createNoteTextview"
+                app:layout_constraintTop_toBottomOf="@+id/eventReminderImageHomeTopBar" />
+
+            <ImageView
+                android:id="@+id/helpandSupportImageVieq"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:gravity="center"
+                android:padding="5dp"
+                android:src="@drawable/baseline_help_24"
+                app:layout_constraintBottom_toBottomOf="@+id/helpandSupportTextView"
+                app:layout_constraintEnd_toEndOf="@+id/eventReminderImageHomeTopBar"
+                app:layout_constraintStart_toStartOf="@+id/eventReminderImageHomeTopBar"
+                app:layout_constraintTop_toBottomOf="@+id/eventReminderImageHomeTopBar" />
+
+            <TextView
+                android:id="@+id/commentsAndFeedbackTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/lato_bold"
+                android:gravity="center|start"
+                android:padding="10dp"
+                android:text="Comments And Feedback"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="@+id/createNoteTextview"
+                app:layout_constraintStart_toStartOf="@+id/createNoteTextview"
+                app:layout_constraintTop_toBottomOf="@+id/helpandSupportTextView" />
+
+            <ImageView
+                android:id="@+id/commentsAndFeedbackImageVieq"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="5dp"
+                android:src="@drawable/baseline_feedback_24"
+                app:layout_constraintBottom_toBottomOf="@+id/commentsAndFeedbackTextView"
+                app:layout_constraintEnd_toEndOf="@+id/cartImageHomeTopBar"
+                app:layout_constraintStart_toStartOf="@+id/helpandSupportImageVieq"
+                app:layout_constraintTop_toBottomOf="@+id/helpandSupportImageVieq" />
+
+            <TextView
+                android:id="@+id/privacyPolicyTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/lato_bold"
+                android:gravity="center|start"
+                android:padding="10dp"
+                android:text="Privacy Policy"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="@+id/createNoteTextview"
+                app:layout_constraintStart_toStartOf="@+id/createNoteTextview"
+                app:layout_constraintTop_toBottomOf="@+id/commentsAndFeedbackTextView" />
+
+            <ImageView
+                android:id="@+id/privacyPolicyImageVieq"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:gravity="center"
+                android:padding="5dp"
+                android:src="@drawable/baseline_privacy_tip_24"
+                app:layout_constraintBottom_toBottomOf="@+id/privacyPolicyTextView"
+                app:layout_constraintEnd_toEndOf="@+id/cartImageHomeTopBar"
+                app:layout_constraintStart_toStartOf="@+id/commentsAndFeedbackImageVieq"
+                app:layout_constraintTop_toBottomOf="@+id/commentsAndFeedbackImageVieq" />
+
+            <TextView
+                android:id="@+id/termsAndConditionTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/lato_bold"
+                android:gravity="center|start"
+                android:padding="10dp"
+                android:text="Terms And Condition"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="@+id/createNoteTextview"
+                app:layout_constraintStart_toStartOf="@+id/privacyPolicyTextView"
+                app:layout_constraintTop_toBottomOf="@+id/privacyPolicyTextView" />
+
+            <ImageView
+                android:id="@+id/termsAndConditionImageView"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:gravity="center"
+                android:padding="5dp"
+                android:src="@drawable/baseline_text_snippet_24"
+                app:layout_constraintBottom_toBottomOf="@+id/termsAndConditionTextView"
+                app:layout_constraintEnd_toEndOf="@+id/cartImageHomeTopBar"
+                app:layout_constraintStart_toStartOf="@+id/privacyPolicyImageVieq"
+                app:layout_constraintTop_toBottomOf="@+id/privacyPolicyImageVieq" />
+
+            <TextView
+                android:id="@+id/accountTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/lato_bold"
+                android:gravity="center|start"
+                android:padding="10dp"
+                android:text="Account and Settings"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="@+id/createNoteTextview"
+                app:layout_constraintStart_toStartOf="@+id/commentsAndFeedbackTextView"
+                app:layout_constraintTop_toBottomOf="@+id/termsAndConditionTextView" />
+
+            <ImageView
+                android:id="@+id/accountImageHomeTopBar"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:gravity="center"
+                android:padding="5dp"
+                android:src="@drawable/baseline_account_circle_24"
+                app:layout_constraintBottom_toBottomOf="@+id/accountTextView"
+                app:layout_constraintEnd_toEndOf="@+id/cartImageHomeTopBar"
+                app:layout_constraintStart_toStartOf="@+id/termsAndConditionImageView"
+                app:layout_constraintTop_toTopOf="@id/accountTextView" />
+
+            <TextView
+                android:id="@+id/logoutTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/lato_bold"
+                android:gravity="center|start"
+                android:padding="10dp"
+                android:text="Logout"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="@+id/accountTextView"
+                app:layout_constraintStart_toStartOf="@+id/accountTextView"
+                app:layout_constraintTop_toBottomOf="@+id/accountTextView" />
+
+            <ImageView
+                android:id="@+id/logImageHomeTopBar"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:gravity="center"
+                android:padding="5dp"
+                android:src="@drawable/baseline_power_settings_new_24"
+                app:layout_constraintBottom_toBottomOf="@+id/logoutTextView"
+                app:layout_constraintEnd_toEndOf="@+id/accountImageHomeTopBar"
+                app:layout_constraintStart_toStartOf="@+id/accountImageHomeTopBar"
+                app:layout_constraintTop_toTopOf="@id/logoutTextView" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+
     <View
         android:id="@+id/view5"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:background="#07000000"
+        android:layout_height="150dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -209,25 +398,33 @@
         android:id="@+id/textView7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
+        android:layout_marginBottom="10dp"
         android:fontFamily="@font/lato_bold"
+        android:gravity="center"
         android:padding="5dp"
-        android:text="MADE WITH LOVE \u2665"
-        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:text="@string/made_with_love"
+        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
         android:textColor="@color/white"
         android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/textView8"
         app:layout_constraintEnd_toEndOf="@id/view5"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="@id/view5"
-        app:layout_constraintTop_toTopOf="@+id/view5" />
+        app:layout_constraintTop_toBottomOf="@+id/bottomView"
+        app:layout_constraintVertical_chainStyle="packed" />
 
     <TextView
+        android:id="@+id/textView8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="App Version 1.0.1"
-        android:textColor="@color/white"
+        android:layout_marginTop="15dp"
         android:fontFamily="@font/lato"
+        android:text="App Version 1.0.1"
         android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/view5"
         app:layout_constraintEnd_toEndOf="@+id/textView7"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="@+id/textView7"
         app:layout_constraintTop_toBottomOf="@+id/textView7" />
 </androidx.constraintlayout.widget.ConstraintLayout>

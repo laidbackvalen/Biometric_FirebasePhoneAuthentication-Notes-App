@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Inner Circle -->
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="#FFFFFF"/> <!-- Color of the inner circle -->
+
+            <gradient
+                android:startColor="#E91E63"
+                android:centerColor="#E91E63"
+                android:endColor="#FF9800"
+                android:useLevel="false"/>
+
+            <corners android:radius="100dp"/>
+        </shape>
+    </item>
+
+    <!-- Gradient Stroke -->
+    <item android:left="4dp" android:right="4dp" android:top="4dp" android:bottom="4dp">
+        <shape android:shape="oval">
+            <solid android:color="@android:color/transparent"/>
+        </shape>
+    </item>
+</layer-list>

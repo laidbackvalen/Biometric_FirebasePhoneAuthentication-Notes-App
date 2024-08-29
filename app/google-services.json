@@ -1,15 +1,16 @@
 {
   "project_info": {
     "project_number": "438399053876",
+    "firebase_url": "https://notes-22392-default-rtdb.firebaseio.com",
     "project_id": "notes-22392",
     "storage_bucket": "notes-22392.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:438399053876:android:c8146240d4135f9c81da61",
+        "mobilesdk_app_id": "1:438399053876:android:0d496afa6ed0501a81da61",
         "android_client_info": {
-          "package_name": "com.example.notes"
+          "package_name": "com.valenpatel.notes"
         }
       },
       "oauth_client": [],
