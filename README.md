@@ -16,7 +16,7 @@ A simple and intuitive Notes App built using Android (Kotlin) that allows users 
 
 ## Tech Stack
 
-- **Language:** Java/Kotlin
+- **Language:** Kotlin
 - **Database:** Firebase Realtime Database
 - **Authentication:** Firebase Phone Authentication
 - **UI Components:** Material Design (RecyclerView, Bottom Sheets, TextInputLayout)
